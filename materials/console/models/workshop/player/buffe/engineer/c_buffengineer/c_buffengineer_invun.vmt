@@ -1,0 +1,113 @@
+"VertexLitGeneric"
+{
+	"$basetexture"		"console\models\workshop\player\buffe\engineer\c_buffengineer/c_buffengineer_color"
+	"$bumpmap"		"console\models\workshop\player\buffe\engineer\c_buffengineer/c_buffengineer_normal"
+	"$invulnlevel"			"0"
+	"$invulnexponent"		"1"
+	"$invulnfmax"			"1"
+	"$invulnscale"			"0"
+	"$invulnphong"			"1"
+
+	"$half"					"0.5"
+
+	"$invulnphongfading"	"0"
+	"$invulnphongfull"		"2"
+	"$invulnphongoutput"	"2" 
+
+	"$invulnexponentfading"	"0"
+	"$invulnexponentfull"	"1"
+	"$invulnexponentoutput"	"1"
+		
+	"$invulnfmaxfading"		"-0.3"
+	"$invulnfmaxfull"		"2"
+	"$invulnfmaxoutput"		"2"
+
+	"$phong" 				"1"
+	"$phongexponent"  		"35"
+	"$phongboost" 			"1"	
+	"$phongfresnelranges"	"[0.03 1 10]"
+	"$phongtint" 			"[1 0.15 0.01]"	
+
+	"$envmap"				"vgui/replay/thumbnails/models/effects/uber_rim"
+	"$envmaptint" 			"[1 0.15 0.01]"
+	"$envmapfresnel"		"1"
+		
+	"$rimlight" 			"1"
+	"$rimlightexponent" 	"11"
+	"$rimlightboost" 		"5"	
+
+	"$cloakPassEnabled" 	"1"
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+		"invis"
+		{
+		}
+		"InvulnLevel"
+		{
+			"resultVar" 	"$invulnlevel"
+		}
+		"LessOrEqual"
+		{
+			"srcVar1"		"$invulnlevel"
+			"srcVar2"		"$half"
+			"lessEqualVar"	"$invulnphongfading"
+			"greaterVar"	"$invulnphongfull"
+			"resultVar"		"$invulnphongoutput"
+		}
+		"LessOrEqual"
+		{
+			"srcVar1"		"$invulnlevel"
+			"srcVar2"		"$half"
+			"lessEqualVar"	"$invulnfmaxfading"
+			"greaterVar"	"$invulnfmaxfull"
+			"resultVar"		"$invulnfmaxoutput"
+		}
+		"LessOrEqual"
+		{
+			"srcVar1"		"$invulnlevel"
+			"srcVar2"		"$half"
+			"lessEqualVar"	"$invulnexponentfading"
+			"greaterVar"	"$invulnexponentfull"
+			"resultVar"		"$invulnexponentoutput"
+		}
+		"Sine"
+		{
+			"resultVar" 	"$invulnfmax"
+			"sineperiod" 	".3"
+			"sinemin" 		"$invulnfmaxoutput"
+			"sinemax" 		"2"
+		}
+		"Sine"
+		{
+			"resultVar" 	"$invulnphong"
+			"sineperiod" 	".3"
+			"sinemin" 		"$invulnphongoutput"
+			"sinemax" 		"2"
+		}
+		"Sine"
+		{
+			"resultVar" 	"$invulnexponent"
+			"sineperiod" 	".3"
+			"sinemin" 		"$invulnexponentoutput"
+			"sinemax" 		"2"
+		}
+		"Equals"
+		{
+			"srcVar1" 		"$invulnexponent"
+			"resultVar" 	"$phongfresnelranges[1]"
+		}
+		"Equals"
+		{
+			"srcVar1" 		"$invulnfmax"
+			"resultVar" 	"$phongfresnelranges[1]"
+		}
+		"Equals"
+		{
+			"srcVar1" 		"$invulnphong"
+			"resultVar" 	"$phongboost" 
+		}
+	}
+}

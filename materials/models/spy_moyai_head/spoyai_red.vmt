@@ -1,0 +1,43 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\spy_moyai_head\spoyai_color"
+	"$lightwarptexture" "models\spy_moyai_head\pyro_lightwarp"
+	$phong 1
+	$basemapalphaphongmask 1
+	$phongboost 10
+	$phongexponent 19
+	$phongfresnelranges "[.03 .55 1]"
+
+	$selfillum 1
+	$selfillummask "models\spy_moyai_head\spoyai_selfillum"	
+	$selfillumtint "[2 1.7 1.4]"
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"spy_invis" //wmodel and team color cloak support
+		{
+		}
+		"invis" //vmodel cloak support
+		{
+		}
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$detail"
+			"animatedtextureframenumvar" "$detailframe"
+			"animatedtextureframerate" 30
+		}
+		"BurnLevel"
+		{
+			"resultVar" "$detailblendfactor"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Equals"
+		{
+			"srcVar1" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}
