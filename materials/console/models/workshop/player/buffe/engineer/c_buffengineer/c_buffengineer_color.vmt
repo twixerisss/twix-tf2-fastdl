@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	"$basetexture"		"console\models\workshop\player\buffe\engineer\c_buffengineer/c_buffengineer_color"
+	"$bumpmap"		"console\models\workshop\player\buffe\engineer\c_buffengineer/c_buffengineer_normal"
+	"$lightwarptexture"		"models/player/pyro/pyro_lightwarp"
+	"$phong"		"1"
+	"$phongexponent"		"20.000000"
+	"$phongboost"		"0.300000"
+	"$phongfresnelranges"		"[.25 .5 1]"
+	"$rimlight"		"1"
+	"$rimlightexponent"		"4"
+	"$rimlightboost"		"2"
+	"$color2"		"{ 255 255 255 }"
+	"$bumpmapalphaphongmask"		"1"
+	"$cloakPassEnabled"		"1"
+}
