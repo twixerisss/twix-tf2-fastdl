@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
-	"$basetexture"		"console\models\workshop\player\buffe\engineer\c_buffengineer/c_buffengineer_zombie"
-	"$bumpmap"		"console\models\workshop\player\buffe\engineer\c_buffengineer/c_buffengineer_1_normal"
+	"$basetexture"		"console/models/player/engineer/c_buffengineer_zombie"
+	"$bumpmap"		"console/models/player/engineer/c_buffengineer_1_normal"
 	"$lightwarptexture"		"models/player/pyro/pyro_lightwarp"
 	"$phong"		"1"
 	"$phongexponent"		"20.000000"

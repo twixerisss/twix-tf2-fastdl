@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
-	"$basetexture"		"console\models\workshop\player\buffe\engineer\c_buffengineer/c_buffengineer_blue_color"
-	"$bumpmap"		"console\models\workshop\player\buffe\engineer\c_buffengineer/c_buffengineer_normal"	"$invulnlevel"			"0"
+	"$basetexture"		"console/models/player/engineer/c_buffengineer_blue_color"
+	"$bumpmap"		"console/models/player/engineer/c_buffengineer_normal"	"$invulnlevel"			"0"
 	"$invulnexponent"		"1"
 	"$invulnfmax"			"1"
 	"$invulnscale"			"0"
